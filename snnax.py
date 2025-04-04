@@ -118,6 +118,7 @@ y0 = jnp.array([-70.0, 0.0, -1])
 key = jax.random.PRNGKey(0)
 
 all_times, y_values, spikes_times = simulate_whole_time( y0, t0, t1, args, key)
+print("Spikes times:", spikes_times)
 import matplotlib.pyplot as plt
 plt.figure()
 plt.plot(all_times, y_values[:, 0], label="v(t)")
